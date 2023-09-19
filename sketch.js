@@ -1,5 +1,5 @@
-let x = 200;
-let speed = 5;
+let x = 100;
+let dx = 1;
 
 function setup() {
   createCanvas(400, 400);
@@ -7,8 +7,12 @@ function setup() {
 
 function draw() {
   background("pink");
-  ellipse(x,height/2,40);
-  if (x >= width - diameter/2)
-  speed = speed * -1;
-  x = x + speed;
+  ellipse(x, width/2, height/2, 200);
+  x = x + dx;
+  if(x> width){
+      dx = -1;
+  }
+  if(x < 0) {
+      dx = 1;
+  }
 }
