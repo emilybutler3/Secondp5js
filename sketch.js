@@ -15,4 +15,13 @@ function draw() {
   if(x < 0) {
       dx = 1;
   }
+
+  function mousePressed() {
+    noLoop();
+  }
+
+  function mouseReleased(){
+    loop();
+  }
+
 }
